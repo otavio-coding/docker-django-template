@@ -4,8 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* NAVIGATION MENU */
+        
+        nav {
+            font-size: 1.4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-inline: 10vh;
+        }
+        .nav-links {
+            
+            display: flex;
+            list-style: none;
+            gap: 2rem ;
+        }
+        /* ABOUT SECTION*/
+        .about-text {
+            font-size: 1.5rem;
+            margin-inline: 10vh;
+            justify-content: space-evenly;
+            text-align: center;
+        }
+        .about-image {
+            
+            max-width: 100%;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>Mãos a Obra</h1>
+    <div id="background">
+        <nav id="nav-bar">
+            <div class="logo">Logo</div>
+            <div>
+                <ul class="nav-links">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Sobre</a></li>
+                    <li><a href="">Projetos</a></li>
+                    <li><a href="">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="about-section">    
+            <div class="about-text">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis totam iusto nam ipsum 
+                    praesentium illum earum possimus ad soluta voluptatem quasi exercitationem placeat, 
+                    blanditiis, laborum accusamus ab impedit magnam aspernatur!
+                </p>
+            </div>
+            <div class="about-image">
+                {% load static %}
+                <img src="{% static 'home/long-shot-man-working-roof.jpg' %}" alt="">
+            </div>
+        </div>
+    </div>    
+    
 </body>
 </html>
