@@ -1,66 +1,113 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        /* NAVIGATION MENU */
-        
-        nav {
-            font-size: 1.4rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-inline: 10vh;
-        }
-        .nav-links {
-            
-            display: flex;
-            list-style: none;
-            gap: 2rem ;
-        }
-        /* ABOUT SECTION*/
-        .about-text {
-            font-size: 1.5rem;
-            margin-inline: 10vh;
-            justify-content: space-evenly;
-            text-align: center;
-        }
-        .about-image {
-            
-            max-width: 100%;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 0;
+      max-width: 100%;
+    }
+    
+    section{
+      margin: 0;
+      padding: 0;
+    }
+    img {
+      max-width: 100%;
+    }
+    
+    /* LOGO  */
+    .logo {
+      font-size: 2.6rem;
+      border: 1px solid black;
+      padding: 1rem;
+    }
 
-    </style>
+    /* NAVIGATION MENU */
+    nav {
+      font-size: 1.4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-inline: 30vh;
+      padding: 5vh;
+    } 
+
+    #nav-menu {
+      background-color: aliceblue;
+    }
+
+    .nav-links {
+      font-size: 1rem;
+      display: flex;
+      list-style: none;
+      gap: 4rem ;
+    }
+
+    /* HERO SECTION*/
+    {% load static %}
+    .hero-wrapper {
+      height: 35rem;
+      background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("{% static 'home/long-shot-man-working-roof.jpg' %}");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-text {
+      font-size: 1.5rem;
+      margin-inline: 15vh;
+      margin-left: 50%;
+      text-align: center;
+      text-justify: distribute;
+      color: white;
+    }
+    button {
+      font-size: 1.2rem;
+      padding: 1rem 2rem;
+      background-color: #aeafaf;
+      color: rgb(0, 0, 0);
+      border: 0px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-    <div id="background">
-        <nav id="nav-bar">
-            <div class="logo">Logo</div>
-            <div>
-                <ul class="nav-links">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Sobre</a></li>
-                    <li><a href="">Projetos</a></li>
-                    <li><a href="">Contato</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div id="about-section">    
-            <div class="about-text">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis totam iusto nam ipsum 
-                    praesentium illum earum possimus ad soluta voluptatem quasi exercitationem placeat, 
-                    blanditiis, laborum accusamus ab impedit magnam aspernatur!
-                </p>
-            </div>
-            <div class="about-image">
-                {% load static %}
-                <img src="{% static 'home/long-shot-man-working-roof.jpg' %}" alt="">
-            </div>
+  <div class="background">
+    <section id="nav-menu">
+      <nav class="nav-content">
+        <div class="logo">Logo</div>
+        <div>
+          <ul class="nav-links">
+            <li><a href="">Home</a></li>
+            <li><a href="">Sobre</a></li>
+            <li><a href="">Projetos</a></li>
+            <li><a href="">Contato</a></li>
+          </ul>
         </div>
-    </div>    
+      </nav>
+    </section>
+    <section id="hero-section">
+      <div class="hero-wrapper">  
+        {% load static %}
+        <div class="hero-text">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis totam iusto nam ipsum 
+            praesentium illum earum possimus ad soluta voluptatem quasi exercitationem placeat, 
+            blanditiis, laborum accusamus ab impedit magnam aspernatur!
+          </p>
+          <button type="button">Fazer Orçamento</button>
+        </div>
+      </div>
+    </section>
+    <section class="projects"></section>
+  </div>    
     
 </body>
 </html>
