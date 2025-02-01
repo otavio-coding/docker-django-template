@@ -4,79 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <style>
-    body{
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      margin: 0;
-      padding: 0;
-      max-width: 100%;
-    }
-    
-    section{
-      margin: 0;
-      padding: 0;
-    }
-    img {
-      max-width: 100%;
-    }
-    
-    /* LOGO  */
-    .logo {
-      font-size: 2.6rem;
-      border: 1px solid black;
-      padding: 1rem;
-    }
-
-    /* NAVIGATION MENU */
-    nav {
-      font-size: 1.4rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-inline: 30vh;
-      padding: 5vh;
-    } 
-
-    #nav-menu {
-      background-color: aliceblue;
-    }
-
-    .nav-links {
-      font-size: 1rem;
-      display: flex;
-      list-style: none;
-      gap: 4rem ;
-    }
-
-    /* HERO SECTION*/
-    {% load static %}
-    .hero-wrapper {
-      height: 35rem;
-      background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("{% static 'home/long-shot-man-working-roof.jpg' %}");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      display: flex;
-      align-items: center;
-    }
-
-    .hero-text {
-      font-size: 1.5rem;
-      margin-inline: 15vh;
-      margin-left: 50%;
-      text-align: center;
-      text-justify: distribute;
-      color: white;
-    }
-    button {
-      font-size: 1.2rem;
-      padding: 1rem 2rem;
-      background-color: #aeafaf;
-      color: rgb(0, 0, 0);
-      border: 0px;
-      cursor: pointer;
-    }
-  </style>
+  <link rel="stylesheet" href="{% load static %} {% static 'home/style.css' %}">
 </head>
 <body>
   <div class="background">
@@ -93,7 +21,7 @@
         </div>
       </nav>
     </section>
-    <section id="hero-section">
+    <section id="hero">
       <div class="hero-wrapper">  
         {% load static %}
         <div class="hero-text">
@@ -106,7 +34,25 @@
         </div>
       </div>
     </section>
-    <section class="projects"></section>
+    <section id="services">
+      <div class="services-content">
+        <ul class="servicers-list">
+          <li><a href="">Construção de Telhados</a></li>
+          <li><a href="">Construção de Paredes</a></li>
+          <li><a href="">Construção de Pisos</a></li>
+          <li><a href="">Construção de Piscinas</a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="projects">
+      <div class="projects-content">
+        <h2>Projetos</h2>
+        <div class="projects-list">
+          <div class="project">
+          </div>
+        </div>
+      </div>
+    </section>
   </div>    
     
 </body>
