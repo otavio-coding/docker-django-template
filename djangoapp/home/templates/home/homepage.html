@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="{% load static %} {% static 'home/style.css' %}">
+  <link rel="stylesheet" href="{% load static %} {% static 'home/style.css' %}?{% now 'U' %}"> <!-- using a timestamp to force the browser to reload the cache.-->
 </head>
 <body>
   <div class="background">
@@ -35,7 +35,7 @@
     </section>
     <section id="services">
       <div class="services-content">
-        <ul class="servicers-list">
+        <ul class="services-list">
           <li><a href="">Construção de Telhados</a></li>
           <li><a href="">Construção de Paredes</a></li>
           <li><a href="">Construção de Pisos</a></li>
