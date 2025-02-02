@@ -1,20 +1,10 @@
-# Dockerized Django Development Environment
-This repository serves as a quickstart for a containerized Django development environment.
-
 ## Requirements:
 * Docker (version 27.0)
 * Django (version 5.0)
 
-## How to use this project:
+## How to run this project in development mode:
 
-1. Clone this repo:
-
-```
-git clone https://github.com/otavio-coding/docker-django-setup.git 
-```
-2. Rename dotenv/.env_example as dotenv/.env and set up your secret key
-
-3. Run Docker Compose:
+1. Run Docker Compose:
 ```
 docker compose up --build 
 ```
